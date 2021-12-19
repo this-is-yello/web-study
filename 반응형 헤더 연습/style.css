@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    width: 100%;
+    font-family: Bakbak One;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    list-style: none;
+}
+
+header {
+    display: flex;
+    background-color: #2a365c;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+}
+
+.h-logo {
+    display: flex;
+    font-size: 24px;
+    color: #fff;
+}
+
+.h-logo i {
+    color: #d49466;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    padding-left: 0;
+}
+
+.nav li {
+    padding: 8px 12px;
+}
+
+.nav li:hover {
+    background-color: #d49466;
+    border-radius: 4px;
+}
+
+.icons {
+    display: flex;
+    list-style: none;
+    font-size: 25px;
+    padding-left: 0;
+    color: #fff;
+}
+
+.icons li {
+    padding: 8px 12px;
+}
+
+.icons li:hover {
+    color: #d49466;
+}
+
+.button {
+    display: none;
+    position: absolute;
+    right: 24px;
+    font-size: 25px;
+    color: #d49466;
+}
+
+@media screen and (max-width: 780px) {
+    header {
+        flex-direction: column;
+        padding: 8px 24px;
+        align-items: flex-start;
+    }
+    
+    .menu {
+        width: 100%;
+        align-items: center;
+    }
+    
+    .nav {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .icons {
+        display: none;
+        justify-content: center;
+        width: 100%;
+        font-size: 25px;
+    }
+    
+    .button {
+        display: block;
+    }
+    
+    .nav.active, .icons.active {
+        display: flex;
+    }
+}
