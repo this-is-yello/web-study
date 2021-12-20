@@ -1,0 +1,243 @@
+:root {
+  /* color */
+  --white-color: #fff;
+  --black-color: #202020;
+  --black2-color: #181818;
+  --blue-color: #045fb4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  /* size */
+  --padding: 12px;
+  --avater-size: 45px;
+
+  /* font-size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto;
+  background-color: var(--black2-color);
+}
+ul {
+  list-style: none;
+}
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: var(--black2-color);
+}
+
+/* ---------- 헤더 ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+header .logo {
+  font-size: var(--font-large);
+}
+header .logo i {
+  color: var(--red-color);
+}
+header .icons .fa-search {
+  margin-right: var(--padding);
+}
+
+/* ---------- 플레이어 ---------- */
+.player {
+  position: sticky;
+  top: 0;
+  align-items: center;
+  margin-left: 12px;
+  margin-right: 12px;
+  background-color: var(--black2-color);
+}
+.player video {
+  margin-top: 12px;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+}
+
+/* ---------- 영상 정보, 버튼's ---------- */
+body > .info {
+  padding: var(--padding);
+}
+.info .data {
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 12px;
+  max-width: 1175px;
+}
+.info .data .hashtag {
+  display: flex;
+  font-size: var(--font-medium);
+  color: var(--blue-color);
+  margin-bottom: 5px;
+}
+.info .data .hashtag li {
+  margin-right: var(--padding);
+}
+.info .data .TitleandButton {
+  display: flex;
+}
+.info .data .TitleandButton .title {
+  font-size: var(--font-large) bold;
+  color: var(--white-color);
+  margin-right: var(--padding);
+  margin-bottom: 5px;
+}
+.info .data .TitleandButton .title.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.info .data .TitleandButton .moreBtn {
+  height: 100%;
+  color: var(--white-color);
+  transition: transform 300ms ease-in-out;
+}
+.info .data .TitleandButton .moreBtn.clicked {
+  transform: rotate(180deg);
+}
+.info .views {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+.action {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--padding) 0;
+}
+.action button {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+.action button i {
+  margin: 0 auto;
+  margin-bottom: calc(var(--padding) / 2);
+  font-size: 16px;
+}
+.action button:hover {
+  color: var(--grey-light-color);
+}
+.action button i.active {
+  color: var(--blue-color);
+}
+
+/* ---------- 채널 정보, 구독버튼 ---------- */
+.channel {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--grey-dark-color);
+  border-bottom: 1px solid var(--grey-dark-color);
+  height: 70px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.channel .data {
+  display: flex;
+  align-items: center;
+}
+.channel .data img {
+  width: var(--avater-size);
+  height: var(--avater-size);
+  border-radius: 50%;
+}
+.channel .data .info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+.channel .data .info .name {
+  font-size: var(--font-medium) bold;
+  color: var(--white-color);
+}
+.channel .data .info .suber {
+  font-size: var(--font-small) bold;
+  color: var(--grey-dark-color);
+}
+.channel .sub {
+  color: var(--red-color);
+  font-size: var(--font-large) bold;
+}
+
+/* ---------- 다음 동영상 ---------- */
+.Next {
+  padding: 0 var(--padding);
+  margin-top: 12px;
+  max-width: 1300px;
+}
+.Next > .title {
+  font-size: var(--font-medium);
+  color: var(--grey-dark-color);
+  margin-bottom: calc(var(--padding) / 2);
+}
+.Next .item {
+  display: flex;
+  margin-top: var(--padding);
+}
+.Next .item:hover {
+  cursor: pointer;
+}
+.Next .item .img {
+  flex: 1 1 35%;
+  margin-right: var(--padding);
+}
+.Next .item .img img {
+  width: 100%;
+}
+.Next .item .info {
+  flex: 1 1 60%;
+}
+.Next .item .moreBtn {
+  flex: 1 1 5%;
+}
+
+.Next .item .info {
+  display: flex;
+  flex-direction: column;
+}
+.Next .item .info .title {
+  font-size: var(--font-small) bold;
+  color: var(--white-color);
+}
+.Next .item .info .ch-name,
+.Next .item .info .views {
+  font-size: var(--font-micro) bold;
+  color: var(--grey-dark-color);
+}
+.Next .item .moreBtn {
+  font-size: var(--font-medium);
+  color: var(--white-color);
+  height: 100%;
+}
+
+.infoAndnext {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .infoAndnext {
+    flex-direction: row;
+    margin: var(--padding) 0;
+  }
+}
