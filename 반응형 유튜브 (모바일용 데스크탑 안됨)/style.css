@@ -61,7 +61,7 @@ header .icons .fa-search {
 .player {
   position: sticky;
   top: 0;
-  align-items: center;
+  text-align: center;
   margin-left: 12px;
   margin-right: 12px;
   background-color: var(--black2-color);
@@ -81,7 +81,6 @@ body > .info {
   margin-left: 12px;
   margin-right: 12px;
   margin-top: 12px;
-  max-width: 1175px;
 }
 .info .data .hashtag {
   display: flex;
@@ -154,7 +153,6 @@ body > .info {
 }
 .channel .data {
   display: flex;
-  align-items: center;
 }
 .channel .data img {
   width: var(--avater-size);
